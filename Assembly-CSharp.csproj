@@ -62,8 +62,8 @@
      <Compile Include="Assets\Scripts\EventManager\IEventHandler.cs" />
      <Compile Include="Assets\Scripts\EventManager\IEventManager.cs" />
      <Compile Include="Assets\Scripts\GameCtrl.cs" />
+     <Compile Include="Assets\Scripts\LauncherCtrl.cs" />
      <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
-     <Compile Include="Assets\Scripts\ProducterCtrl.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>F:/UnityProj/ArenaDemo/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
