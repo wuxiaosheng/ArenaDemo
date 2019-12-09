@@ -3,12 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 public class LauncherCtrl : Object {
-    private List<GameObject> _objs;
+    private GameObject _launcher;
     public LauncherCtrl() {
-        _objs = new List<GameObject>();
-        for (int i = 1; i < 6; i++) {
-            _objs.Add(GameObject.Find("launcher"+i));
-        }
+        
         onAddListener();
     }
 
@@ -27,8 +24,9 @@ public class LauncherCtrl : Object {
     public void launcher(GameObject obj) {
         Transform child = obj.transform.Find("Sphere");
         Vector3 pos = child.position;
-        //child.localToWorldMatrix
-        
+        pos.y -= 0.5f;
+        Event evt = EventManager.getInstance().createEvent(EEventType.EVT_BUFF, "pos", pos);
+        EventManager.getInstance().trigger(evt);
         
     }
 
